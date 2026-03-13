@@ -13,8 +13,8 @@
 
 .title {
   font-size: 72px;
-  font-weight: 700;
-  letter-spacing: -2px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
   line-height: 1;
   margin-bottom: 16px;
 }
@@ -151,7 +151,7 @@ input[type="range"]::-webkit-slider-thumb {
 .btn {
   padding: 12px 32px;
   font-size: 14px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Shippori Mincho B1', serif;
   font-weight: 500;
   border: none;
   border-radius: 6px;
@@ -201,9 +201,37 @@ input[type="range"]::-webkit-slider-thumb {
   to { transform: rotate(360deg); }
 }
 
-.loading-text {
-  font-size: 13px;
+.loading-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.loading-step {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.2);
+  transition: color 0.3s;
+}
+
+.loading-step.active {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.loading-step.done {
   color: rgba(255, 255, 255, 0.4);
+}
+
+.loading-elapsed {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  font-variant-numeric: tabular-nums;
+}
+
+.loading-hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .error-text {
